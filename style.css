@@ -1,0 +1,22 @@
+body {
+    -webkit-tap-highlight-color: transparent; /* Prevent flash on mobile tap */
+}
+
+/* Custom scrollbar for display */
+.display::-webkit-scrollbar {
+    height: 4px;
+}
+.display::-webkit-scrollbar-track {
+    background: #1a202c; /* Tailwind's gray-900 */
+}
+.display::-webkit-scrollbar-thumb {
+    background: #4a5568; /* Tailwind's gray-700 */
+    border-radius: 2px;
+}
+.display::-webkit-scrollbar-thumb:hover {
+    background: #718096; /* Tailwind's gray-500 */
+}
+.display {
+    scrollbar-width: thin;
+    scrollbar-color: #4a5568 #1a202c;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-gray-900 flex justify-center items-center h-screen font-sans">
+    <div class="calculator bg-gray-800 rounded-2xl shadow-2xl p-6 w-full max-w-sm">
+        <div class="display-container mb-4">
+            <input type="text" id="display" class="display w-full bg-gray-900 text-white text-right text-5xl p-4 rounded-lg border-2 border-gray-700 outline-none font-mono" readonly placeholder="0">
+        </div>
+        <div class="buttons grid grid-cols-5 gap-3">
+            <!-- Row 1 -->
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="(">(</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value=")">)</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="%">%</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="DEL">DEL</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-red-600 hover:bg-red-500" data-value="C">C</button>
+            <!-- Row 2 -->
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="sin(">sin</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="cos(">cos</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="tan(">tan</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="log(">log</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-orange-500 hover:bg-orange-400" data-value="/">/</button>
+            <!-- Row 3 -->
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="ln(">ln</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="7">7</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="8">8</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="9">9</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-orange-500 hover:bg-orange-400" data-value="*">*</button>
+            <!-- Row 4 -->
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="^">^</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="4">4</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="5">5</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="6">6</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-orange-500 hover:bg-orange-400" data-value="-">-</button>
+            <!-- Row 5 -->
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="sqrt(">sqrt</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="1">1</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="2">2</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="3">3</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-orange-500 hover:bg-orange-400" data-value="+">+</button>
+            <!-- Row 6 -->
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="!">!</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-700 hover:bg-gray-600" data-value="π">π</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value="0">0</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-gray-600 hover:bg-gray-500" data-value=".">.</button>
+            <button class="calc-btn text-white text-xl font-semibold py-3 rounded-lg transition-transform duration-100 active:scale-95 bg-green-500 hover:bg-green-400" data-value="=">=</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
